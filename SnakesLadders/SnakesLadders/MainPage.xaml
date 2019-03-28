@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SnakesLadders"
+             x:Class="SnakesLadders.MainPage">
+
+    <Grid x:Name="PageContentGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> 
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Text="Snakes & &amp; Ladders" HorizontalOptions="Centre"
+                Grid.Row="0" Margin="0,3"/>
+
+        <Grid x:Name="BoardGameGrid" Grid.Row="1" HorizontalOptions="Centre"
+              HeightRequest="500" WidthRequest="500">
+            <Image Source="SnakeBoard.PNG" Aspect="AspectFit"
+                   Grid.Row="0" Grid.Column="0"/>
+        </Grid>
+
+        <StackLayout x:Name="ButtonStack" Grid.Row="2" HorizontalOptions="Centre"
+                     Margin="0,3" Orientation="Horizontal">
+            <Entry x:Name="DiceEntry" Placeholder="3" Margin="4,0"/>
+            <Button x:Name="MoveStepButton" Margin="4,0" Text="Move By Step"
+                    Clicked="MoveStepButton_Clicked"/>
+            
+        </StackLayout>
+    </Grid>
+    
+    
+    
+</ContentPage>
